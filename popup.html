@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- created by Rizwan https://github.com/rizwanwebdev -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        width: 300px;
+        padding: 15px;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #333;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      .logo {
+        font-size: 18px;
+        font-weight: bold;
+        color: #7ed957;
+        margin-bottom: 5px;
+      }
+
+      .subtitle {
+        font-size: 12px;
+        color: #aaa;
+      }
+
+      .domain-info {
+        border: 1px solid #fa6e85;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      .domain-label {
+        font-size: 11px;
+        color: #888;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+      }
+
+      .domain-name {
+        font-weight: bold;
+        color: #ddd;
+      }
+
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      .metric-card {
+        border: 1px solid #fa6e85;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .metric-label {
+        font-size: 10px;
+        color: #999;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+      }
+
+      .metric-value {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .metric-value.good {
+        color: #7ed957;
+      }
+
+      .metric-value.warning {
+        color: #ffcc00;
+      }
+
+      .metric-value.bad {
+        color: red;
+      }
+
+      .actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: bold;
+
+      }
+
+
+      .btn-secondary {
+        background: #719c58;
+        color: #fff;
+        transition: all ease .2s;
+      }
+
+      .btn-secondary:hover {
+        background: #60b7fe;
+        color: #111;
+
+      }
+
+      .loading {
+        text-align: center;
+        color: #999;
+        font-style: italic;
+      }
+      details{
+        margin-top: 10px;
+        color: #aaa;
+      }
+      summary{
+        cursor: pointer;
+      }
+      details p{
+        border: 1px solid #fa6e85;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      details p a{
+        color: #eee;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blob"></div>
+    <div class="header">
+      <div class="logo">Domain Authority Checker</div>
+      <div class="subtitle">Check Domain Authority (DA) <br>and Spam Score instantly.</div>
+    </div>
+
+    <div class="domain-info">
+      <div class="domain-label">Current Domain</div>
+      <div class="domain-name" id="current-domain">Loading...</div>
+    </div>
+
+    <div class="metrics-grid" id="metrics-grid">
+      <div class="loading">Loading metrics...</div>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-secondary" id="refresh">Refresh</button>
+    </div>
+
+    <details>
+      <summary>About this extension</summary>
+      <p>
+        Instantly view DA and Spam Score for any website.<br>
+        Developed by <a href="https://rizwanweb.site" target="_blank" rel="noopener noreferrer">Rizwan</a>.<br>
+        Data credit to <a href="https://keywordseverywhere.com/" target="_blank" rel="noopener noreferrer">Keyword Everywhere</a>.<br>
+        No setup or login required.
+      </p>
+    </details>
+    
+    <script src="popup.js"></script>
+  </body>
+</html>
